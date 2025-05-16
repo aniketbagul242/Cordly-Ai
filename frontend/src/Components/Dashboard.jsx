@@ -23,7 +23,7 @@ const Dashboard = () => {
     if (!selectedRoute) return;
     setLoading(true);
     try {
-      const res = await axios.get(`http://localhost:3000/${selectedRoute}`);
+      const res = await axios.get(`https://cordly-ai-backend.onrender.com/${selectedRoute}`);
       setData(res.data.result);
       setSQL(res.data.sql);
       setQuestion(res.data.question);
